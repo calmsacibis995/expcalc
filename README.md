@@ -1,0 +1,2 @@
+# expcalc
+Pokémon experience calculator.
