@@ -227,26 +227,49 @@ CalcEXP_Glitch_4B(double n)
 	return(((12 * pow(n, (double)3)) / 13) + (127 * pow(n, (double)2)) + (43 * n) - 250);
 }
 
+/*
+ * Hex 57
+ */
 int
 CalcEXP_Glitch_57(double n)
 {
 	return(((2 * pow(n, (double)3)) / 3) + (24 * pow(n, (double)2)) + (18 * n) - 33);
 }
 
+/*
+ * Hex 64
+ */
 int
 CalcEXP_Glitch_64(double n)
 {
 	return((2 * pow(n, (double)3)) + (32 * pow(n, (double)2)) + (80 * n) - 205);
 }
 
+/*
+ * Hex 88
+ */
 int
 CalcEXP_Glitch_88(double n)
 {
 	return(((3 * pow(n, (double)3)) / 5) - (122 * pow(n, (double)2)) + (38 * n) - 204);
 }
 
+/*
+ * Hex A5
+ *
+ * Glitch Pokémon that are in this group:
+ * …… (0xE2, R/B)
+ * C (0xE5, R/B)
+ * X C (0xE8, R/B)
+ */
 int
-main()
+CalcEXP_Glitch_A5(double n)
+{
+	return((pow(n, (double)3) / 4) + (60 * pow(n, (double)2)) + (33 * n) - 215);
+}
+
+int
+main(void)
 {
 	double n;
 
@@ -280,4 +303,5 @@ main()
 	printf("0x57: %d\n", CalcEXP_Glitch_57(n));
 	printf("0x64: %d\n", CalcEXP_Glitch_64(n));
 	printf("0x88: %d\n", CalcEXP_Glitch_88(n));
+	printf("0xA5: %d\n", CalcEXP_Glitch_A5(n));
 }
