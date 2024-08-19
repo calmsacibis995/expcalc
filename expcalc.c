@@ -99,6 +99,8 @@ CalcEXP_Fluctuating(double n)
  *
  * Notice: Groups 0x95 (Glitch Pokémon 0xCA - Yellow only) and 0xFF
  * (Glitch Pokémon 0xED - Yellow only) are not calculated, as they divide by zero.
+ *
+ * They are included for research purposes.
  */
 
 /*
@@ -268,6 +270,15 @@ CalcEXP_Glitch_A5(double n)
 	return((pow(n, (double)3) / 4) + (60 * pow(n, (double)2)) + (33 * n) - 215);
 }
 
+/*
+ * Hex 23
+ */
+int
+CalcEXP_Glitch_23(double n)
+{
+	return((80 * pow(n, (double)2)) + (23 * n) - 236);
+}
+
 int
 main(void)
 {
@@ -304,4 +315,5 @@ main(void)
 	printf("0x64: %d\n", CalcEXP_Glitch_64(n));
 	printf("0x88: %d\n", CalcEXP_Glitch_88(n));
 	printf("0xA5: %d\n", CalcEXP_Glitch_A5(n));
+	printf("0x23: %d\n", CalcEXP_Glitch_23(n));
 }
