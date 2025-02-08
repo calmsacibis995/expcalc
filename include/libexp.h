@@ -34,5 +34,6 @@ extern int CalcEXP_Glitch_64(double n);
 extern int CalcEXP_Glitch_88(double n);
 extern int CalcEXP_Glitch_A5(double n);
 extern int CalcEXP_Glitch_23(double n);
+extern int CalcEXP_Glitch_10(double n);
 
 #endif /* _LIBEXP_H_ */

@@ -1,4 +1,22 @@
 /*
+ * expcalc - Pokémon experience calculator.
+ * Copyright (c) 2024, 2025 Stephanos Stephanidis. All rights reserved.
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+ * or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License
+ * for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <https://www.gnu.org/licenses/>.
+ */
+
+/*
  * Glitch experience groups - Present in R/B/Y
  *
  * Notice: Groups 0x95 (Glitch Pokémon 0xCA - Yellow only) and 0xFF
@@ -146,6 +164,10 @@ CalcEXP_Glitch_57(double n)
 
 /*
  * Hex 64
+ * Glitch Pokémon that are in this group:
+ *
+ * Glitch (0xE3, R/B)
+ * - - (0xE6, R/B)
  */
 int
 CalcEXP_Glitch_64(double n)
@@ -183,4 +205,19 @@ int
 CalcEXP_Glitch_23(double n)
 {
 	return((80 * pow(n, (double)2)) + (23 * n) - 236);
+}
+
+/*
+ * Hex 10
+ *
+ * Glitch Pokémon that are in this group:
+ * . 4( h 4 (0xEB, Y)
+ * ₽ pゥ. 4( (0xEE, Y)
+ * ゥ▶ ゥ▼ ゥ(0xF3, Y)
+ * ゥ ₽ A (0xF6, Y)
+ */
+int
+CalcEXP_Glitch_10(double n)
+{
+	return((pow(n, (double)3)) + (62 * pow(n, (double)2)) + (145 * n) - 34);
 }

@@ -1,6 +1,6 @@
 /*
  * expcalc - Pokémon experience calculator.
- * Copyright (c) 2024 Stephanos Stephanidis. All rights reserved.
+ * Copyright (c) 2024, 2025 Stephanos Stephanidis. All rights reserved.
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -60,4 +60,5 @@ main(void)
 	printf("0x88: %d\n", CalcEXP_Glitch_88(n));
 	printf("0xA5: %d\n", CalcEXP_Glitch_A5(n));
 	printf("0x23: %d\n", CalcEXP_Glitch_23(n));
+	printf("0x10: %d\n", CalcEXP_Glitch_10(n));
 }
